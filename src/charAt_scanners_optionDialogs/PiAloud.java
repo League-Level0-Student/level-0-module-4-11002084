@@ -6,20 +6,31 @@ package charAt_scanners_optionDialogs;
 import java.io.IOException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class PiAloud {
 
 	// 1. Make a main method and make sure your program can run
 	public static void main(String[] args) {
-		String pi="3.141592653589793238462643383279502884197169399";
+		String pi="3141592653589793238462643383279502884197169399";
 		System.out.println(pi.charAt(0));
 		System.out.println(pi.charAt(1));
-		for(int i=0; i<47; i++) {
+		for(int i=0; i<45; i++) {
 			System.out.println(pi.charAt(i));
 			char thing=pi.charAt(i);
 			speak(thing);
-
 		}
 		
+		for(int i=0; i<45; i++) {
+		System.out.println("What is the next digit of pi? (Starting with the first digit if first time asked)");
+		char input=getInputFromUser();
+		if(input==pi.charAt(i)) {
+			System.out.println("Correct");
+		}
+		else {
+			System.err.println("Incorrect");
+		}
+		}
 	}
 
 	// 2. Make a String variable to hold the value of Pi. You could use http://www.piday.org/million/ for the value.
