@@ -3,12 +3,11 @@ package extra;
 import javax.swing.JOptionPane;
 
 public class SimpleCalculator {
-	static String numberA = JOptionPane.showInputDialog("Give me a whole integer.");
-	static String numberB = JOptionPane.showInputDialog("Give me a second integer.");
-	static int number1 = Integer.parseInt(numberA);
-	static int number2 = Integer.parseInt(numberB);
-
 	public static void main(String[] args) {
+		String numberA = JOptionPane.showInputDialog("Give me a whole integer.");
+		String numberB = JOptionPane.showInputDialog("Give me a second integer.");
+		int number1 = Integer.parseInt(numberA);
+		int number2 = Integer.parseInt(numberB);
 
 		// 2. Customize pop-up to support add/subtract/multiply/divide operations.
 		int operation = JOptionPane.showOptionDialog(null, "What operation do you want to perform on these numbers?",
