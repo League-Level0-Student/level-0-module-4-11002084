@@ -4,7 +4,9 @@ import javax.swing.JOptionPane;
 
 public class SimpleCalculator {
 	public static void main(String[] args) {
-		String numberA = JOptionPane.showInputDialog("Give me a whole integer.");
+		
+		for(int i=0; i<5; i++) {
+		String numberA = JOptionPane.showInputDialog("Give me an integer.");
 		String numberB = JOptionPane.showInputDialog("Give me a second integer.");
 		int number1 = Integer.parseInt(numberA);
 	    int number2 = Integer.parseInt(numberB);
@@ -13,31 +15,32 @@ public class SimpleCalculator {
 		int operation = JOptionPane.showOptionDialog(null, "What operation do you want to perform on these numbers?",
 				"Calculator", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "+", "-", "*", "/" }, null);
 		if(operation==0) {
-			add();
+			add(number1, number2);
 		}
 		else if(operation==1) {
-			subtract();
+			subtract(number1, number2);
 		}
 		else if(operation==2) {
-			multiply();
+			multiply(number1, number2);
 		}
 		else {
 			JOptionPane.showMessageDialog(null, "Please note that this answer is rounded down to the nearest integer.");
-			divide();
+			divide(number1,number2);
+		}
 		}
 	}
 
-	static void add() {
-		JOptionPane.showMessageDialog(null, numberA+ " + " +numberB+" = " +(number1+number2));
+	static void add(int a, int b) {
+		JOptionPane.showMessageDialog(null, a+ " + " +b+" = " +(a+b));
 	}
-	static void subtract() {
-		JOptionPane.showMessageDialog(null, numberA+ " - " +numberB+" = " +(number1-number2));
+	static void subtract(int a, int b) {
+		JOptionPane.showMessageDialog(null, a+ " - " +b+" = " +(a-b));
 	}
-	static void multiply() {
-		JOptionPane.showMessageDialog(null, numberA+ " * " +numberB+" = " +(number1*number2));
+	static void multiply(int a, int b) {
+		JOptionPane.showMessageDialog(null, a+ " * " +b+" = " +(a*b));
 	}
-	static void divide() {
-		JOptionPane.showMessageDialog(null, numberA+ " / " +numberB+" = " +(number1/number2));
+	static void divide(int a, int b) {
+		JOptionPane.showMessageDialog(null, a+ " / " +b+" = " +(a/b));
 	}
 }
 

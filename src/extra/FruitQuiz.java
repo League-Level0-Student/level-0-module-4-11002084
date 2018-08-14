@@ -41,7 +41,7 @@ public class FruitQuiz extends KeyAdapter {
 		
 		// 13. check if it is right or wrong like you did for question1
 		if (question4.isShowing()) {
-			if (keyCode == 66) {
+			if (keyCode == keyB) {
 				// 4. Call the correct() method
 				correct();
 				System.exit(0);
@@ -53,7 +53,7 @@ public class FruitQuiz extends KeyAdapter {
 			}
 		}
 		if (question3.isShowing()) {
-			if (keyCode == 65) {
+			if (keyCode == keyA) {
 				// 4. Call the correct() method
 				correct();
 				nextQuestion(question4);
@@ -65,7 +65,7 @@ public class FruitQuiz extends KeyAdapter {
 			}
 		}
 		if (question2.isShowing()) {
-			if (keyCode == 65) {
+			if (keyCode == keyA) {
 				// 4. Call the correct() method
 				correct();
 				nextQuestion(question3);
@@ -79,7 +79,7 @@ public class FruitQuiz extends KeyAdapter {
 
 		if (question1.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			if (keyCode == 67) {
+			if (keyCode == keyC) {
 				// 4. Call the correct() method
 				correct();
 				// 7. Use the nextQuestion() method to go to question2
