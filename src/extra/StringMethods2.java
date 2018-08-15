@@ -18,9 +18,9 @@ public class StringMethods2 {
 		System.out.println(word.substring(0, 3));
 		// 5. Print a single char somewhere in the middle of your String
 		//    REMINDER: char's in string start at index 0
-		System.out.println();
+		System.out.println(word.substring(0, 4)+"w"+word.substring(4, 11));
 		// 6. BONUS -- print the LAST 3 char's of your string using
 		//        .length() to determine WHERE the last 3 char's are located.
-		System.out.println(word.length());
+		System.out.println(word.substring(word.length()-3, word.length()));
 	}
 }
